@@ -1,6 +1,6 @@
 import React, {useEffect, useState, Component} from "react";
 import { StatusBar } from 'expo-status-bar';
-import { Modal, StyleSheet, Text, View, Pressable, ActivityIndicator, FlatList, Image, Button } from 'react-native';
+import { ScrollView, Modal, StyleSheet, Text, View, Pressable, ActivityIndicator, FlatList, Image, Button } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import styles from '../styles/MoviesStyle.js';
 import {API_KEY} from '@env';
@@ -59,7 +59,7 @@ export default function MovieList({ navigation }) {
 
       return (
       <View>
-        <View style={{flexDirection: 'row', flexWrap: "wrap", justifyContent: 'flex-start'}}>
+        <ScrollView contentContainerStyle={{flexDirection: 'row', justifyContent: 'flex-start'}} horizontal={true}>
         {dataCategories.map((currentGenre) => (
           
             <Button onPress={() => {setGenre(currentGenre.name); 
@@ -71,7 +71,7 @@ export default function MovieList({ navigation }) {
           
           ))}
 
-        </View>
+        </ScrollView>
           <View>
             <Text>{genre.toUpperCase()}</Text>
           </View>
