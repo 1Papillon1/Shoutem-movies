@@ -1,6 +1,15 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
+    container: {
+      flexDirection:"row",
+    },
+    text: {
+      fontSize: 16,
+    lineHeight: 21,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    },
     box : {
       borderStyle: "solid",
       marginTop: 20,
