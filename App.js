@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Text, View, Image, TouchableOpacity, Button } from 'react-native';
 import { DrawerActions, NavigationContainer, StackActions, FlatList } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import MovieList  from "./components/MovieList";
-import About from './components/About';
-import styles from './styles/IconStyle.js';
-import { Picker } from '@react-native-picker/picker';
-import {API_KEY} from '@env';
+import MovieList  from "./modules/movies/components/MovieList";
+import About from './modules/about/screens/About';
+import MovieDetails from "./modules/movies/components/MovieDetails";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // left drawer
 const LeftDrawer = createDrawerNavigator();
@@ -23,12 +21,20 @@ function LeftDrawerScreen({ navigation }) {
 
         />
         <LeftDrawer.Screen name="About" component={About} />
+        <LeftDrawer.Screen 
+        options={{
+          drawerItemStyle: { height: 0 }
+        }}
+        name="MovieDetails" 
+        component={MovieDetails} />
       </LeftDrawer.Navigator>
   );
 }
 
+//stack navigator
 
 
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   

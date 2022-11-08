@@ -4,6 +4,21 @@ export default StyleSheet.create({
     container: {
       flexDirection:"row",
     },
+    
+    flexButtons: {
+      flexDirection: "row", 
+      marginLeft:20, 
+      justifyContent: "left"
+    },
+    buttonWrapper: {
+      width: 150,
+    },
+    buttonWrapperSecondary: {
+      flexDirection: "row",
+      justifyContent: "center",
+      backgroundColor: "#e0d9c7",
+      paddingBottom: 10,
+    },
     text: {
       fontSize: 16,
     lineHeight: 21,
