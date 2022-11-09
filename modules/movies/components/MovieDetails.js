@@ -1,9 +1,5 @@
-import React, { UseState } from 'react';
-import { Button, View, Image, Text, ActivityIndicator } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import useApi from '../networking/useApi';
-import { useState } from 'react';
+import React from 'react';
+import {View, Image, Text } from 'react-native';
 import styles from '../styles/MovieDetailsStyle';
 
 export default function MovieDetails({ route, navigation }) {
