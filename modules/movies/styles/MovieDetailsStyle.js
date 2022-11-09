@@ -1,30 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-    container: {
-      flexDirection:"row",
-    },
     
-    flexButtons: {
-      flexDirection: "row", 
-      marginLeft:20, 
-      
-    },
-    buttonWrapper: {
-      width: 150,
-    },
-    buttonWrapperSecondary: {
-      flexDirection: "row",
-      justifyContent: "center",
-      backgroundColor: "#e0d9c7",
-      paddingBottom: 10,
-    },
-    text: {
-      fontSize: 16,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    },
     box : {
       borderStyle: "solid",
       marginTop: 20,
@@ -32,7 +9,13 @@ export default StyleSheet.create({
       marginLeft: 15,
       marginRight: 15,
     },
-    
+    paragraph: {
+        backgroundColor: "#e0d9c7",
+        fontSize: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingBottom: 10,
+    },
       row: {
         backgroundColor: "#e0d9c7",
         fontSize: 24,

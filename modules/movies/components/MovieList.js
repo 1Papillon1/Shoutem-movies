@@ -74,8 +74,8 @@ export default function MovieList({ navigation }) {
 
                 <Button 
                     
-                    onPress={() => 
-                    navigation.navigate('MovieDetails')
+                    onPress={() => {
+                    navigation.navigate('MovieDetails', {movieOverview: item.overview, movieRelease: item.release_date,movieImg: 'https://image.tmdb.org/t/p/w500' + item.backdrop_path, movieTitle: item.title, moviePopularity: item.popularity})}
                 } 
                     title={"See Details"}>   
                 
