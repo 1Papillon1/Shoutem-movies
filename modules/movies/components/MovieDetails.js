@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, Text } from 'react-native';
+import {View, Image, Text, Button } from 'react-native';
 import styles from '../styles/MovieDetailsStyle';
 
 export default function MovieDetails({ route, navigation }) {
@@ -27,6 +27,9 @@ export default function MovieDetails({ route, navigation }) {
                 <Text style={styles.row}>
                   Popularity: {moviePopularity}
                 </Text>
+                <View style={styles.buttonWrapper}>
+                <Button onPress={() => navigation.goBack()} title="Go back to list" />
+                </View>
         </View>
 
       )

@@ -26,10 +26,13 @@ function LeftDrawerScreen({ navigation }) {
           drawerItemStyle: { height: 0 }
         }}
         name="MovieDetails" 
-        component={MovieDetails} />
+        component={MovieDetails} 
+        />
       </LeftDrawer.Navigator>
   );
 }
+
+
 
 //stack navigator
 

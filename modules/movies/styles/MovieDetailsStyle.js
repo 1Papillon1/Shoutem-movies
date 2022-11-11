@@ -1,7 +1,10 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-    
+  buttonWrapper: {
+    flexDirection: "row",
+    justifyContent: "center",
+  },
     box : {
       borderStyle: "solid",
       marginTop: 20,
