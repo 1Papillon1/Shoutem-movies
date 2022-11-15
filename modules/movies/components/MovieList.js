@@ -2,9 +2,14 @@ import React, {useState, } from "react";
 import { Text, View, FlatList, Image, Button, ActivityIndicator } from 'react-native';
 import styles from '../styles/MovieListStyle';
 import useApiMovieList from "../networking/useApiMovieList";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchMoviesAction } from "../../redux/Actions";
 
 
 export default function MovieList({ navigation }) {
+
+
+
 
   const [url, setUrl] = useState("https://api.themoviedb.org/3/movie/upcoming?api_key=");
 

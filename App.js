@@ -4,6 +4,8 @@ import MovieList  from "./modules/movies/components/MovieList";
 import About from './modules/about/screens/About';
 import MovieDetails from "./modules/movies/components/MovieDetails";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { configureStore } from '@reduxjs/toolkit'
+
 
 
 const Stack = createNativeStackNavigator();
