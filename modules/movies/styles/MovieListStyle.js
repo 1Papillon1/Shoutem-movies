@@ -7,11 +7,12 @@ export default StyleSheet.create({
     
     flexButtons: {
       flexDirection: "row", 
-      marginLeft:20, 
-      
+      marginLeft:15, 
+      marginTop: 15,
     },
     buttonWrapper: {
       width: 150,
+      marginRight: 15,
     },
     buttonWrapperSecondary: {
       flexDirection: "row",

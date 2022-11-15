@@ -1,7 +1,7 @@
 import {API_KEY} from '@env';
 import { useEffect, useState } from "react"
 
-const useApi = (url) => {
+const useApiMovieDetails = (url) => {
   const [isLoading, setLoading] = useState(true)
   const [data, setData] = useState(null)
 
@@ -13,7 +13,7 @@ const useApi = (url) => {
     .then(json => {
       console.log(json)
       setLoading(false)
-      setData(json.results)
+      setData(json)
     })
   };
 
@@ -24,7 +24,4 @@ const useApi = (url) => {
   return { isLoading, data, setData }
 };
 
-export default useApi;
-
-
-
+export default useApiMovieDetails;

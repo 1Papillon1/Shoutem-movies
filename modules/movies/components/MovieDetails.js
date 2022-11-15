@@ -1,36 +1,55 @@
 import React from 'react';
-import {View, Image, Text, Button } from 'react-native';
+import {View, ScrollView, FlatList, Image, Text, Button, ActivityIndicator} from 'react-native';
 import styles from '../styles/MovieDetailsStyle';
+import useApiMovieDetails from "../networking/useApiMovieDetails";
+import { useState } from 'react';
 
 export default function MovieDetails({ route, navigation }) {
 
-    const {movieOverview, movieRelease, movieImg, movieTitle, moviePopularity} = route.params;
-  
+    const {movieId} = route.params;
+
+
+    const [url, setUrl] = useState("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=");
+    const { isLoading, data } = useApiMovieDetails(url)
+    
 
     
-      return(
-        <View style={styles.box}>
+   
 
-              <Image
+      return(
+        <View>
+      
+          {
+          isLoading && (
+            <ActivityIndicator />
+          )
+          }
+          {
+          !isLoading && data && (
+              <View>
+                
+                <Image
                 style={styles.image}
-                source={{uri:movieImg}}
+                source={{uri:data.backdrop_path}}
                 />
                 <Text style={styles.row}>
-                  {movieTitle}
+                  {data.title}
                 </Text>
                 <Text style={styles.rowSecondary}>
-                  {movieRelease}
+                  {data.release_date}
                 </Text>
                 <Text style={styles.paragraph}>
-                  {movieOverview}
+                  {data.overview}
                 </Text>
                 <Text style={styles.row}>
-                  Popularity: {moviePopularity}
+                  Popularity: {data.popularity}
                 </Text>
-                <View style={styles.buttonWrapper}>
-                <Button onPress={() => navigation.goBack()} title="Go back to list" />
-                </View>
+
+              </View>
+            )
+          }
         </View>
 
       )
 }
+

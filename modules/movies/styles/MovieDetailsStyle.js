@@ -6,6 +6,7 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
     box : {
+      flex: 1,
       borderStyle: "solid",
       marginTop: 20,
       borderColor: "white",
@@ -24,7 +25,8 @@ export default StyleSheet.create({
         fontSize: 24,
         textAlign: "center",
         fontWeight: "bold",
-    
+        paddingTop: 10,
+        paddingBottom: 10,
       },
       rowSecondary: {
         backgroundColor: "#e0d9c7",

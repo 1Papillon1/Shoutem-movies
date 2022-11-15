@@ -1,7 +1,7 @@
 import React, {useState, } from "react";
 import { Text, View, FlatList, Image, Button, ActivityIndicator } from 'react-native';
 import styles from '../styles/MovieListStyle';
-import useApi from "../networking/useApi";
+import useApiMovieList from "../networking/useApiMovieList";
 
 
 export default function MovieList({ navigation }) {
@@ -9,9 +9,9 @@ export default function MovieList({ navigation }) {
   const [url, setUrl] = useState("https://api.themoviedb.org/3/movie/upcoming?api_key=");
 
 
-  const { isLoading, data } = useApi(url)
+  const { isLoading, data } = useApiMovieList(url)
 
-  
+
 
     return(
       <View>
@@ -75,7 +75,7 @@ export default function MovieList({ navigation }) {
                 <Button 
                     
                     onPress={() => {
-                    navigation.navigate('MovieDetails', {movieOverview: item.overview, movieRelease: item.release_date,movieImg: 'https://image.tmdb.org/t/p/w500' + item.backdrop_path, movieTitle: item.title, moviePopularity: item.popularity})}
+                    navigation.navigate('MovieDetails', {movieId: item.id})}
                 } 
                     title={"See Details"}>   
                 
