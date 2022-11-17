@@ -26,7 +26,7 @@ export default function MovieDetails({ route, navigation }) {
           }
           {
           !isLoading && data && (
-              <View>
+              <View style={styles.box}>
                 
                 <Image
                 style={styles.image}

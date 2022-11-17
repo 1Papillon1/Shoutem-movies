@@ -7,21 +7,18 @@ export default StyleSheet.create({
   },
     box : {
       flex: 1,
-      borderStyle: "solid",
+      backgroundColor: "white",
       marginTop: 20,
-      borderColor: "white",
       marginLeft: 15,
       marginRight: 15,
     },
     paragraph: {
-        backgroundColor: "#e0d9c7",
         fontSize: 20,
         paddingLeft: 20,
         paddingRight: 20,
         paddingBottom: 10,
     },
       row: {
-        backgroundColor: "#e0d9c7",
         fontSize: 24,
         textAlign: "center",
         fontWeight: "bold",
@@ -29,7 +26,6 @@ export default StyleSheet.create({
         paddingBottom: 10,
       },
       rowSecondary: {
-        backgroundColor: "#e0d9c7",
         fontSize: 20,
         textAlign: "center",
         paddingTop: 10,

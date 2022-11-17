@@ -13,12 +13,15 @@ export default StyleSheet.create({
     buttonWrapper: {
       width: 150,
       marginRight: 15,
+      
     },
     buttonWrapperSecondary: {
       flexDirection: "row",
       justifyContent: "center",
-      backgroundColor: "#e0d9c7",
+      backgroundColor: "white",
       paddingBottom: 10,
+      borderBottomLeftRadius: 10,
+      borderBottomRightRadius: 10,
     },
     text: {
       fontSize: 16,
@@ -35,14 +38,15 @@ export default StyleSheet.create({
     },
     
       row: {
-        backgroundColor: "#e0d9c7",
+        backgroundColor: "white",
         fontSize: 24,
         textAlign: "center",
         fontWeight: "bold",
-    
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
       },
       rowSecondary: {
-        backgroundColor: "#e0d9c7",
+        backgroundColor: "white",
         fontSize: 20,
         textAlign: "center",
         paddingTop: 10,
